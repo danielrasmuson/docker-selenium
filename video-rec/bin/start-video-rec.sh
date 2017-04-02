@@ -43,7 +43,7 @@ ffmpeg -f x11grab \
   -i "${DISPLAY}.0+0,0+nomouse" \
   ${FFMPEG_CODEC_ARGS} \
   -segment_format_options movflags=+faststart \
-  -y -an "${tmp_video_path}" 2>&1 &
+  -y "${tmp_video_path}" 2>&1 &
 VID_TOOL_PID=$!
 
 # Exit all child processes properly
